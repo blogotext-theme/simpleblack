@@ -1,49 +1,57 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
+	<meta charset="UTF-8" />
 	<title>{article_titre_page}{blog_nom}</title>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=yes" />
 	<meta name="generator" content="BlogoText" />
 	<meta name="robots" content="all" />
 	<meta name="author" content="{blog_auteur}" />
 	<meta name="description" content="{blog_description}" />
-	<meta name="keywords" content="{keywords}" />
+	<link rel="icon" type="image/png" href="{style}/images/favicon.png" />
+	<link rel="apple-touch-icon" href="{style}/images/apple-touch-icon.png">
+	<link rel="canonical" href="{racine_du_site}" />
+	<link rel="image_src" href="{style}/images/apple-touch-icon.png" />
+	<meta itemprop="name" content="{article_titre}" />
+	<meta itemprop="description" content="{article_chapo}" />
+	<meta itemprop="image" content="{style}/images/apple-touch-icon.png">
+	<meta property="og:title" content="{article_titre_page}{blog_nom}" />
+	<meta property="og:url" content="{racine_du_site}" />
+	<meta property="og:description" content="{blog_description}" />
+	<meta property="og:site_name" content="{blog_nom}" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:image" content="{style}/images/apple-touch-icon.png" />
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="{style}/images/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<link type="text/css" rel="stylesheet" href="{style}/style.css" />
 	<link type="application/rss+xml" rel="alternate" title="RSS 2.0 - Articles" href="{rss}" />
-	<style type="text/css">
-	#email-adress { display: none!important; }
-	</style>
 </head>
-
 <body>
-
-<div id="page">
-
-<div id="top">
-<h1><a href="{racine_du_site}">{blog_nom}</a></h1>
-<h2>{blog_description}</h2>
-</div>
-
-<div id="sidebar">
-	<h3>Rechercher</h3>
-	{recherche}
-	<hr />
-	<h3>Calendrier</h3>
-	{calendrier}
-	<hr />
-	<h3>Tags</h3>
-	{categories_encart}
-</div>
-
-<div id="contenu">
-	{BOUCLE_posts}{/BOUCLE_posts}
-</div> <!-- einde #contenu -->
-
-{pagination}
-
-</div> <!-- einde #page -->
-
-<p id="footer">Publié avec <a href="http://lehollandaisvolant.net/blogotext/">BlogoText</a><span id="mobilelink"> - <a href="?m">version mobile/normale</a></span> - Thème <a href="http://blog.veggie.fr">SimpleBlack</a></p>
+	<div id="page">
+		<header id="top">
+			<h1><a href="{racine_du_site}">{blog_nom}</a></h1>
+			<h2>{blog_description}</h2>
+		</header>
+		<aside id="sidebar">
+			<h3>Rechercher</h3>
+			{recherche}
+			<hr />
+			<h3>Calendrier</h3>
+			{calendrier}
+			<hr />
+			<h3>Tags</h3>
+			{categories_encart}
+		</aside>
+		<section id="contenu">
+			{BOUCLE_posts}{/BOUCLE_posts}
+		</section> <!-- einde #contenu -->
+		{pagination}
+	</div> <!-- einde #page -->
+	<footer id="footer">
+		<p>Publié avec <a href="http://lehollandaisvolant.net/blogotext/" title="">BlogoText</a><span id="mobilelink"> - <a href="?m" title="">version mobile/normale</a></span> - Thème <a href="http://blog.veggie.fr" title="">SimpleBlack</a></p>
+	</footer>
 
 <script type="text/javascript">
 /* Tag script found at : http://www.siteduzero.com/tutoriel-3-34703-insertion-de-balises-dans-une-zone-de-texte.html */
@@ -71,7 +79,6 @@ function insertTag(startTag, endTag, tag, tagType) {
 	}
 	field.scrollTop = scroll;
 }
-
 function reply(code) {
 	var field = document.getElementById('form-commentaire').getElementsByTagName('textarea')[0];
 	field.focus();
@@ -82,7 +89,6 @@ function reply(code) {
 	field.scrollTop = 10000;
 	field.focus();
 }
-
 function resize(id, dht) {
 	var elem = document.getElementById(id);
 	var ht = elem.offsetHeight;
@@ -90,8 +96,6 @@ function resize(id, dht) {
 	elem.style.height = size+"px";
 	return false;
 }
-
 </script>
-
 </body>
 </html>

@@ -7,17 +7,14 @@
 		<p class="tags">{article_tags}</p>
 	</div>
 </div>
-
 <h2>{nombre_commentaires}</h2>
-
 {BOUCLE_commentaires}
 	<div class="comment" id="{commentaire_ancre}">
-		<h3><a href="{commentaire_lien}">#</a> - <a href="#form-commentaire" onclick="reply('[b]@[{commentaire_auteur}|#{commentaire_ancre}] :[/b] ');">@</a> - {commentaire_auteur_lien} - {commentaire_date} à {commentaire_heure}  </h3>
+		<h3><a href="{commentaire_lien}" title="">#</a> - <a href="#form-commentaire" onclick="reply('[b]@[{commentaire_auteur}|#{commentaire_ancre}] :[/b] ');" title="">@</a> - {commentaire_auteur_lien} - {commentaire_date} à {commentaire_heure}  </h3>
 		{commentaire_contenu}
 	</div>
 {/BOUCLE_commentaires}
-
-<p><a href="{rss_comments}">Flux RSS des commentaires de cet article</a></p>
+<p><a href="{rss_comments}" title="">Flux RSS des commentaires de cet article</a></p>
 <div id="postcom">
 	{formulaire_commentaire}
 </div>
